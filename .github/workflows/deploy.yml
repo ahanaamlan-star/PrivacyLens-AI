@@ -1,0 +1,46 @@
+name: CI/CD Security Pipeline
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  audit-and-build:
+    name: Lint, Test & Package PWA
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js Runtime (v20)
+      uses: actions/setup-node@v4
+      with:
+        node-size: '20'
+        cache: 'npm'
+
+    - name: Install Application Dependencies
+      run: npm ci
+
+    - name: Execute Static Lint Checks
+      run: npm run lint
+
+    - name: Build Standalone Static Assets
+      run: npm run build
+
+    - name: Verify Service Worker & Manifest Compilation
+      run: |
+        if [ ! -f dist/sw.js ]; then
+          echo "Error: Service Worker (sw.js) not compiled in static root."
+          exit 1
+        fi
+        if [ ! -f dist/manifest.json ]; then
+          echo "Error: Web App Manifest (manifest.json) not compiled in static root."
+          exit 1
+        fi
+        echo "PWA Assets verified successfully!"

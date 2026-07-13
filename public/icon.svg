@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Shield Glow Gradient -->
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Lens Glass Gradient -->
+    <linearGradient id="lens-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(34, 211, 238, 0.25)" />
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.6)" />
+    </linearGradient>
+
+    <!-- Inner Glow Gradient -->
+    <radialGradient id="inner-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Base Circular Icon Wrapper -->
+  <rect width="512" height="512" rx="128" fill="url(#bg-grad)" stroke="#1e293b" stroke-width="4" />
+
+  <!-- Background Decorative Cyber Lines -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.15" stroke-dasharray="10 5" />
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.1" />
+
+  <!-- Tech crosshairs -->
+  <line x1="256" y1="20" x2="256" y2="40" stroke="#22d3ee" stroke-width="2" stroke-opacity="0.4" />
+  <line x1="256" y1="472" x2="256" y2="492" stroke="#22d3ee" stroke-width="2" stroke-opacity="0.4" />
+  <line x1="20" y1="256" x2="40" y2="256" stroke="#22d3ee" stroke-width="2" stroke-opacity="0.4" />
+  <line x1="472" y1="256" x2="492" y2="256" stroke="#22d3ee" stroke-width="2" stroke-opacity="0.4" />
+
+  <!-- Radiant Core Glow -->
+  <circle cx="256" cy="230" r="140" fill="url(#inner-glow)" />
+
+  <!-- Shield -->
+  <path d="M 256 100 
+           C 320 100, 370 80, 390 60
+           C 390 180, 360 280, 256 360
+           C 152 280, 122 180, 122 60
+           C 142 80, 192 100, 256 100 Z" 
+        fill="none" 
+        stroke="url(#shield-grad)" 
+        stroke-width="16" 
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="drop-shadow(0px 0px 20px rgba(6, 182, 212, 0.4))" />
+
+  <!-- Privacy Lens Circle (Magnifying Glass Structure) -->
+  <circle cx="256" cy="210" r="70" fill="url(#lens-grad)" stroke="#22d3ee" stroke-width="10" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.5))" />
+
+  <!-- Inner Cyber pupil/sensor -->
+  <circle cx="256" cy="210" r="30" fill="#0f172a" stroke="#06b6d4" stroke-width="4" />
+  <circle cx="256" cy="210" r="12" fill="#22d3ee" />
+  <circle cx="248" cy="202" r="4" fill="#ffffff" /> <!-- Reflection specular light -->
+
+  <!-- Lens Handle -->
+  <path d="M 305 260 L 350 305" stroke="#22d3ee" stroke-width="12" stroke-linecap="round" />
+  <path d="M 335 290 L 380 335" stroke="#0284c7" stroke-width="16" stroke-linecap="round" />
+
+  <!-- Safe Check Overlay (Success Badge in bottom right) -->
+  <g transform="translate(320, 320)">
+    <!-- Base Glow -->
+    <circle cx="40" cy="40" r="42" fill="#020617" />
+    <circle cx="40" cy="40" r="35" fill="#10b981" />
+    <!-- Checkmark path -->
+    <path d="M 23 40 L 34 51 L 57 28" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

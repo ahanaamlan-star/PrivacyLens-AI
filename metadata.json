@@ -1,0 +1,6 @@
+{
+  "name": "PrivacyLens AI",
+  "description": "Offline AI Cybersecurity Companion featuring browser-based Transformers.js (BERT) and on-device NLP heuristics to safely analyze pasted emails, SMS text, and website content.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
