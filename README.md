@@ -29,48 +29,119 @@ Unlike traditional AI-powered security platforms, PrivacyLens AI performs all in
 *   **📊 Threat Intelligence Analytics Dashboard**: Robust visual graphics built with React & Recharts monitoring threat ratios, chronological scan counts, anomaly alerts, model inference confidence buckets, and engine F1 scores.
 *   **📬 Multi-Vector Shield Engines**: Dedicated client scanners for Emails, SMS messages, Website domains, visual screens (OCR/Vision), and raw QR payloads.
 *   **🔄 Background Synchronized Ledger**: Safe, delayed integration leveraging W3C Background Sync to push offline threat logs to a decentralized intelligence ledger when connectivity returns.
-
+---
 ---
 
-## Project Structure
-
-The codebase is organized in a highly modular, clean, and extensible React with TypeScript architecture:
+# 🏗️ System Architecture
 
 ```text
+                    User
+
+                      │
+
+                      ▼
+
+     Email / SMS / QR / Screenshot
+
+                      │
+
+                      ▼
+
+     Browser-Based AI Engine
+      (Transformers.js)
+
+                      │
+
+                      ▼
+
+      Threat Classification Engine
+
+                      │
+
+                      ▼
+
+Risk Score + Explainable AI Output
+
+                      │
+
+                      ▼
+
+ IndexedDB (Local Scan History)
+
+                      │
+
+                      ▼
+
+ Analytics Dashboard
+
+---
+# 🛠️ Tech Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| **Frontend** | React, TypeScript, Vite |
+| **UI & Styling** | Tailwind CSS, Glassmorphism Design |
+| **On-Device AI** | Transformers.js, DistilBERT, WebAssembly |
+| **Browser APIs** | IndexedDB, Service Workers, Background Sync, Cache API |
+| **Security Modules** | Email Scanner, SMS Scanner, Website Scanner, QR Scanner, Screenshot Analyzer |
+| **Data Visualization** | Recharts |
+| **Offline Support** | Progressive Web App (PWA), Offline Caching |
+| **Development Tools** | Node.js, npm |
+| **Deployment** | Docker, Vercel, Netlify, GitHub Pages |
+| **Version Control** | Git, GitHub |
+---
+
+# 📂 Project Structure
+
+The project follows a modular and scalable architecture designed for maintainability and future expansion.
+
+```text
+PrivacyLens-AI
+│
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml          # Automated CI/CD build & test workflow
+│       └── deploy.yml               # CI/CD workflow
+│
+├── docs/
+│   └── screenshots/                 # README screenshots
+│
 ├── public/
-│   ├── icon.svg                # Modern, vector-based cybersecurity logo (maskable)
-│   ├── manifest.json           # Web App Manifest for native OS-level installation
-│   └── sw.js                   # Advanced Offline Service Worker (Caching, BG Sync, messaging)
+│   ├── icon.svg                     # Application icon
+│   ├── manifest.json                # PWA Manifest
+│   └── sw.js                        # Service Worker
+│
 ├── src/
+│   │
 │   ├── components/
-│   │   ├── AnimatedBackground.tsx # Tech-forward retro glowing cyber lines background
-│   │   ├── Header.tsx          # Real-time connectivity banner, diagnostic pills, & install triggers
-│   │   ├── RiskMeter.tsx       # Dynamic SVG meter representing percentage security threat level
-│   │   └── Sidebar.tsx         # Responsive layout controller for navigation across scanner views
+│   │   ├── AnimatedBackground.tsx
+│   │   ├── Header.tsx
+│   │   ├── RiskMeter.tsx
+│   │   └── Sidebar.tsx
+│   │
 │   ├── views/
-│   │   ├── AiResults.tsx       # Deep semantic analysis log detailing neural parameters
-│   │   ├── Analytics.tsx       # Recharts-driven enterprise dashboard visualizing cyber threats
-│   │   ├── Dashboard.tsx       # High-level aggregate widgets, speed indicators, and action triggers
-│   │   ├── EmailScanner.tsx    # Email threat parsing and visual content analyzer
-│   │   ├── LocalAiClassifier.tsx# BERT-powered local natural language heuristic processing
-│   │   ├── QrScanner.tsx       # Direct QR code scan and payload parsing module
-│   │   ├── ScanHistory.tsx     # Session activity log detailing flagged incidents
-│   │   ├── ScreenshotAnalyzer.tsx # Visually spoofed screen analyzer
-│   │   ├── Settings.tsx        # System settings, offline db controls, and model pre-cache buttons
-│   │   ├── SmsScanner.tsx      # Core SMS smishing parsing module
-│   │   └── WebsiteScanner.tsx  # Dynamic domain reputation heuristic evaluation
-│   ├── App.tsx                 # Base controller, network state listener, and route registry
-│   ├── index.css               # Global styling, modern font import, and tailwind theme setup
-│   ├── main.tsx                # Client mounting file with registration script for Service Worker
-│   └── types.ts                # Strict TypeScript system type definitions
-├── .dockerignore               # Optimized Docker context exclusion list
-├── Dockerfile                  # Multi-stage, low-footprint Docker configuration for local/cloud containers
-├── LICENSE                     # MIT License specification file
-├── package.json                # Project dependencies and deployment scripts
-└── vite.config.ts              # Custom bundling configuration for React + Vite
+│   │   ├── Dashboard.tsx
+│   │   ├── EmailScanner.tsx
+│   │   ├── SmsScanner.tsx
+│   │   ├── WebsiteScanner.tsx
+│   │   ├── QrScanner.tsx
+│   │   ├── ScreenshotAnalyzer.tsx
+│   │   ├── LocalAiClassifier.tsx
+│   │   ├── Analytics.tsx
+│   │   ├── ScanHistory.tsx
+│   │   ├── AiResults.tsx
+│   │   └── Settings.tsx
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   └── types.ts
+│
+├── .dockerignore
+├── Dockerfile
+├── LICENSE
+├── README.md
+├── package.json
+└── vite.config.ts
 ```
 
 ---
@@ -141,6 +212,17 @@ Run PrivacyLens inside a lightweight, highly secure, custom Alpine-based Nginx c
    *Access the running web portal by navigating to `http://localhost:8080`.*
 
 ---
+---
+
+# 🎥 Demo Video
+
+A complete walkthrough of PrivacyLens AI demonstrating browser-based on-device AI inference, offline functionality, and cybersecurity threat detection.
+
+**Demo Link:**
+
+> *(Add your YouTube / Google Drive / Loom link here before final submission.)*
+
+---
 
 ## Demo Section
 
@@ -164,13 +246,81 @@ Below is a brief functional sequence highlighting on-device offline security pro
 
 ---
 
-## Screenshots Section
+## 📸 Screenshots
 
-| Dashboard & Interface | Cybersecurity Metrics |
-| :---: | :---: |
-| **PWA App Icon Branding** | **Threat Command Analytics** |
-| ![Modern Privacy Lens Icon](/public/icon.svg) | *Recharts dynamic Area and Doughnut diagrams representing active real-time cyber threats.* |
+### Landing Page
 
+![Landing](docs/screenshots/landing.png)
+
+---
+
+### Dashboard
+
+![Dashboard](docs/screenshots/dashboard.png)
+
+---
+
+### Email Scanner
+
+![Email Scanner](docs/screenshots/email-scanner.png)
+
+---
+
+### SMS Scanner
+
+![SMS Scanner](docs/screenshots/sms-scanner.png)
+
+---
+
+### Website Scanner
+
+![Website Scanner](docs/screenshots/website-scanner.png)
+
+---
+
+### QR Scanner
+
+![QR Scanner](docs/screenshots/qr-scanner.png)
+
+---
+
+### Screenshot Analyzer
+
+![Screenshot Analyzer](docs/screenshots/screenshot-analyzer.png)
+
+---
+
+### AI Results
+
+![AI Results](docs/screenshots/results.png)
+
+---
+
+### Analytics Dashboard
+
+![Analytics](docs/screenshots/analytics.png)
+---
+---
+
+# 🌟 Why PrivacyLens AI?
+
+✔ 100% Browser-Based On-Device AI
+
+✔ Privacy-First Architecture
+
+✔ Zero Cloud AI Processing
+
+✔ Offline-First Design
+
+✔ Real-Time Threat Detection
+
+✔ Explainable AI Results
+
+✔ Progressive Web App Support
+
+✔ Local Data Storage
+
+✔ Lightweight and Fast
 ---
 
 ## Future Scope
@@ -179,6 +329,16 @@ Below is a brief functional sequence highlighting on-device offline security pro
 2.  **🛰️ Distributed P2P Threat Ledger**: Decentralized offline peer networks syncing threat alerts without central web-servers.
 3.  **🎤 Local Vocal Spoof Detection**: Transcribe and analyze incoming spam voice files or phone audio tracks locally to flag audio cloning/phishing.
 
+---
+---
+
+# 👩‍💻 Developed By
+
+**Ahana Amlan Sahoo**
+
+B.Tech Information Technology
+
+Manipal Institute of Technology, Bengaluru
 ---
 
 ## License
