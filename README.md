@@ -4,8 +4,25 @@
 
 ---
 
-## Key Features & Capabilities
+## Problem Statement
 
+Cybersecurity threats such as phishing emails, fraudulent QR codes, malicious websites, and scam SMS messages continue to increase. Most AI-powered detection platforms rely on cloud-based inference, requiring users to upload sensitive personal information to external servers. This introduces privacy concerns, higher latency, and dependence on internet connectivity.
+
+PrivacyLens AI addresses these challenges by performing intelligent threat detection entirely on the user's device, ensuring sensitive data never leaves the browser.
+---
+## Solution Overview
+PrivacyLens AI is an offline-first browser application that performs AI-powered cybersecurity analysis completely on-device. It detects phishing emails, scam SMS messages, malicious QR codes, suspicious URLs, and spoofed website screenshots using locally executed AI models, browser storage, and offline caching.
+The platform combines modern web technologies with browser-based machine learning to provide secure, low-latency, privacy-preserving threat detection without relying on cloud AI inference.
+---
+## 🧠 How PrivacyLens AI Uses On-Device AI
+Unlike traditional AI-powered security platforms, PrivacyLens AI performs all inference directly inside the user's browser.
+- All AI models execute locally using browser-based inference.
+- Sensitive emails, SMS messages, URLs, QR codes, and screenshots never leave the user's device.
+- Browser technologies such as WebAssembly, IndexedDB, and Service Workers enable fast, secure, and offline-capable AI processing.
+- After the initial model download, the application can continue analyzing content even without an active internet connection.
+- This architecture provides lower latency, improved privacy, and complete user control over sensitive information.
+---
+## Key Features & Capabilities
 *   **⚡ Progressive Web App (PWA) Support**: 100% installable with responsive standalone launch capability, automatic service worker updates, and customizable branding assets.
 *   **📡 Offline Cache Integrity**: Cache-First strategy for neural weights combined with Network-First fallback models for application files. The application runs and functions flawlessly without active internet connections.
 *   **🧠 Local Model Pre-Caching**: Allows users to download and store the complete BERT transformer model weights (`Xenova/distilbert-base-uncased-finetuned-sst-2-english`) directly into their local browser cache.
