@@ -323,60 +323,98 @@ Below is a brief functional sequence highlighting on-device offline security pro
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-### Landing Page
-
-![Landing](docs/screenshots/landing.png)
+The following screenshots showcase the key features and workflow of PrivacyLens AI.
 
 ---
 
-### Dashboard
+## 1. Welcome Portal
 
-![Dashboard](docs/screenshots/dashboard.png)
+The landing page introduces PrivacyLens AI, highlighting its offline-first architecture and browser-based cybersecurity capabilities.
 
----
-
-### Email Scanner
-
-![Email Scanner](docs/screenshots/email-scanner.png)
+![Welcome Portal](docs/screenshots/01-welcome-portal.png)
 
 ---
 
-### SMS Scanner
+## 2. SOC Dashboard
 
-![SMS Scanner](docs/screenshots/sms-scanner.png)
+The Security Operations Center (SOC) dashboard provides an overview of system status, threat summaries, recent activity, and quick access to all security modules.
 
----
-
-### Website Scanner
-
-![Website Scanner](docs/screenshots/website-scanner.png)
+![SOC Dashboard](docs/screenshots/02-soc-dashboard.png)
 
 ---
 
-### QR Scanner
+## 3. Email Phishing Analyzer
 
-![QR Scanner](docs/screenshots/qr-scanner.png)
+Analyze suspicious emails locally using on-device AI to identify phishing attempts, suspicious language, and malicious intent.
 
----
-
-### Screenshot Analyzer
-
-![Screenshot Analyzer](docs/screenshots/screenshot-analyzer.png)
+![Email Phishing Analyzer](docs/screenshots/03-email-scanner.png)
 
 ---
 
-### AI Results
+## 4. Email Detection Result
 
-![AI Results](docs/screenshots/results.png)
+Displays the AI-generated threat assessment, confidence score, detected phishing indicators, and recommended mitigation steps.
+
+![Email Detection Result](docs/screenshots/04-email-result.png)
 
 ---
 
-### Analytics Dashboard
+## 5. SMS Smishing Shield
 
-![Analytics](docs/screenshots/analytics.png)
+Detect fraudulent SMS messages and identify common smishing patterns without sending message content to external servers.
+
+![SMS Smishing Shield](docs/screenshots/05-sms-scanner.png)
+
 ---
+
+## 6. Website URL Scanner
+
+Analyze suspicious URLs and identify typosquatting, malicious domains, and insecure website characteristics.
+
+![Website Scanner](docs/screenshots/06-website-scanner.png)
+
+---
+
+## 7. Website Detection Result
+
+The AI explains why a website is classified as suspicious by highlighting detected indicators and providing security recommendations.
+
+![Website Detection Result](docs/screenshots/07-website-result.png)
+
+---
+
+## 8. Screenshot Vision OCR
+
+Upload screenshots of suspicious webpages for local OCR extraction and phishing analysis.
+
+![Screenshot Vision OCR](docs/screenshots/08-vision-ocr.png)
+
+---
+
+## 9. QR Quishing Guard
+
+Inspect QR codes locally to identify potentially malicious destinations before opening them.
+
+![QR Quishing Guard](docs/screenshots/09-qr-scanner.png)
+
+---
+
+## 10. Threat Intelligence Dashboard
+
+Interactive visualizations summarize detected threats, incident trends, and overall security posture.
+
+![Threat Intelligence Dashboard](docs/screenshots/10-threat-dashboard.png)
+
+---
+
+## 11. AI Model Metrics & Telemetry
+
+Displays AI confidence metrics, model performance indicators, and overall inference statistics for greater transparency.
+
+![AI Model Metrics](docs/screenshots/11-ai-telemetry.png)
+
 ---
 
 # 🌟 Why PrivacyLens AI?
