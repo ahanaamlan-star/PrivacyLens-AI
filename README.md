@@ -186,6 +186,83 @@ Follow these simple commands to setup the development environment on your local 
 
 ---
 
+# 🧪 Sample Inputs and Expected Outputs
+
+## 📧 Email Phishing Analyzer
+
+### Sample Input
+
+**Subject:**
+Urgent! Verify Your Bank Account
+
+**Body:**
+Your account has been suspended due to suspicious activity. Click the link below immediately to verify your credentials.
+
+### Expected Output
+
+- Threat Level: **High**
+- Risk Score: **100%**
+- Indicators:
+  - Suspicious urgency
+  - Credential harvesting language
+  - Suspicious domain
+- Recommendation:
+  Do not click the provided link. Verify directly through the official website.
+
+---
+
+## 🌐 Website Typosquat Scanner
+
+### Sample Input
+
+http://paypaI-login-security.com
+
+### Expected Output
+
+- Classification: **Malicious**
+- Threat Indicators:
+  - Typosquatting detected
+  - HTTP (Unsecured)
+  - Suspicious domain structure
+- Recommendation:
+  Avoid visiting the website.
+
+---
+
+## 💬 SMS Smishing Shield
+
+### Sample Input
+
+Your bank account has been locked. Verify immediately:
+http://secure-bank-login.xyz
+
+### Expected Output
+
+- Threat Level: **High**
+- Classification: **Smishing Attempt**
+- Recommendation:
+  Ignore the message and verify through your bank's official application.
+
+---
+
+## 📱 QR Quishing Guard
+
+### Sample Input
+
+QR Code containing:
+https://secure-login-update.xyz
+
+### Expected Output
+
+- Classification: **Suspicious**
+- Threat Indicators:
+  - Unknown domain
+  - Potential phishing URL
+- Recommendation:
+  Verify the destination before opening.
+
+---
+
 ## Deployment Instructions
 
 ### Standard Production Build
