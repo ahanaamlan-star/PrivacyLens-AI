@@ -1,14 +1,22 @@
 # PrivacyLens AI — Offline Shield
 
-> **PrivacyLens AI** is an advanced, enterprise-grade Offline-First cybersecurity scanning ecosystem and diagnostic dashboard. Running entirely in-browser with Zero Network dependencies, it shields endpoints by analyzing phishing payloads, smishing SMS text signatures, malicious QR codes, URL structure heuristics, and security screenshot scans using local on-device machine learning (Transformers.js / BERT) and advanced NLP parsing logic.
+> **PrivacyLens AI** is an offline-first cybersecurity platform that leverages browser-based On-Device AI to detect phishing emails, malicious websites, fraudulent QR codes, scam SMS messages, and suspicious screenshots. By performing intelligent threat analysis locally using **Transformers.js** and **DistilBERT**, the application protects user privacy, reduces latency, and continues to function even without an active internet connection.
 
 ---
 
-## Problem Statement
+## 🎯 Problem Statement
 
-Cybersecurity threats such as phishing emails, fraudulent QR codes, malicious websites, and scam SMS messages continue to increase. Most AI-powered detection platforms rely on cloud-based inference, requiring users to upload sensitive personal information to external servers. This introduces privacy concerns, higher latency, and dependence on internet connectivity.
+Cybersecurity attacks such as phishing emails, malicious websites, QR code scams (quishing), and SMS-based phishing (smishing) are becoming increasingly sophisticated and difficult to identify. Many AI-powered security solutions depend on cloud-based inference, requiring users to upload sensitive information for analysis. This raises privacy concerns, introduces additional latency, and limits usability in low-connectivity or offline environments.
 
-PrivacyLens AI addresses these challenges by performing intelligent threat detection entirely on the user's device, ensuring sensitive data never leaves the browser.
+PrivacyLens AI addresses these challenges by bringing AI inference directly to the user's device. Using browser-based machine learning, it analyzes potential threats locally, ensuring that sensitive data remains on the device while providing fast, privacy-preserving, and offline-capable cybersecurity assistance.
+---
+# 🌐 Live Demo
+
+**Try PrivacyLens AI here:**
+
+🔗 (https://privacylens-ai.ai.studio/)
+
+> Experience browser-based, privacy-preserving cybersecurity powered by On-Device AI.
 ---
 ## Solution Overview
 PrivacyLens AI is an offline-first browser application that performs AI-powered cybersecurity analysis completely on-device. It detects phishing emails, scam SMS messages, malicious QR codes, suspicious URLs, and spoofed website screenshots using locally executed AI models, browser storage, and offline caching.
