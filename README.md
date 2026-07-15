@@ -297,8 +297,7 @@ A complete walkthrough of PrivacyLens AI demonstrating browser-based on-device A
 
 **Demo Link:**
 
-> *(Add your YouTube / Google Drive / Loom link here before final submission.)*
-
+> https://drive.google.com/file/d/1bEiBuzgpsfsm8XSKpKpe1l0EChqey4FK/view?usp=sharing
 ---
 
 ## Demo Section
